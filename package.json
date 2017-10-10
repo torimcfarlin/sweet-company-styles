@@ -1,0 +1,36 @@
+{
+  "name": "@torimcfarlin/sweet-company-styles",
+  "version": "1.0.0",
+  "description": "SweetCompany styles for consistent company stylin'",
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "test": "mocha --require specs/test-setup.js --compilers js:babel-core/register --recursive './{,!(web|node_modules)/**/}*.spec.js'",
+    "flow": "flow",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Tori McFarlin",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "mocha": "^4.0.1",
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "^16.0.0",
+    "sinon": "^4.0.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-native": "^0.49.3"
+  }
+}
