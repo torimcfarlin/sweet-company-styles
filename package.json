@@ -7,7 +7,7 @@
     "src/"
   ],
   "scripts": {
-    "test": "mocha --require specs/test-setup.js --compilers js:babel-core/register --recursive './{,!(web|node_modules)/**/}*.spec.js'",
+    "test": "mocha specs/ --require react-native-mock/mock.js --compilers js:babel-core/register",
     "flow": "flow",
     "lint": "eslint ."
   },
@@ -18,19 +18,19 @@
   "author": "Tori McFarlin",
   "license": "ISC",
   "devDependencies": {
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "enzyme": "^3.1.0",
-    "enzyme-adapter-react-16": "^1.0.1",
-    "mocha": "^4.0.1",
-    "react-native-mock": "^0.3.1",
-    "react-test-renderer": "^16.0.0",
-    "sinon": "^4.0.1"
+    "babel-preset-react-native": "1.9.1",
+    "babel-register": "^6.22.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.0",
+    "mocha": "^3.2.0",
+    "react-test-renderer": "15.4.2",
+    "sinon": "^1.17.7"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-native": "^0.49.3"
+    "babel-core": "^6.21.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-native": "^0.42.3",
+    "react-native-mock": "^0.2.9"
   }
 }

@@ -6,39 +6,30 @@ import sinon from 'sinon';
 
 import SweetText from '../src/SweetText';
 import { StandardFontSize, StandardFontFamily } from '../src/typography';
+import { DarkPink } from '../src/colours';
 
 describe('SweetText', () => {
   describe('styles', () => {
     it('should call have default styles', () => {
       const view = shallow(<SweetText />);
 
-      expect(view.props.style).to.eql({ fontFamily: StandardFontFamily, fontSize: StandardFontSize });
+      expect(view.props().style[0]).to.eql({ fontFamily: StandardFontFamily, fontSize: StandardFontSize });
     });
 
     it('should accept style as props', () => {
-      const image = { uri: 'some image uri' };
-      const view = shallow(<InteractiveImage
-        image={image}
-        onPhotoOpen={onPhotoOpenHandlerSpy}
-      />);
+      const styles = { color: DarkPink };
+      const view = shallow(<SweetText style={styles}/>);
 
-      view.find(TouchableHighlight).simulate('press');
-
-      expect(onPhotoOpenHandlerSpy).to.have.been.calledWith(image);
+      expect(view.props().style[1]).to.eql(styles);
     });
   });
 
   describe('children', () => {
-    it('should accept children as props', () => {
-      const image = { uri: 'some image uri' };
-      const view = shallow(<InteractiveImage
-        image={image}
-        onPhotoOpen={onPhotoOpenHandlerSpy}
-      />);
+    it('should render children', () => {
+      const someText = 'Wicked Awesome Text';
+      const view = shallow(<SweetText>{someText}</SweetText>);
 
-      view.find(TouchableHighlight).simulate('press');
-
-      expect(onPhotoOpenHandlerSpy).to.have.been.calledWith(image);
+      expect(view.find(Text).children().node).to.eql(someText);
     });
   });
 });
