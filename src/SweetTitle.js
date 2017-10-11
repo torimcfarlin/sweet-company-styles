@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 import { SweetText } from './SweetText';
-import { LargeFontSize } from './typography';
+import { LargeFontSize, FontWeightBold } from './typography';
 import { Grey200 } from './colours';
 
 const styles = {
@@ -12,7 +12,7 @@ const styles = {
     backgroundColor: Grey200,
   },
   text: {
-    fontWeight: 'bold',
+    fontWeight: FontWeightBold,
     lineHeight: 24,
     fontSize: LargeFontSize,
   },
@@ -20,6 +20,6 @@ const styles = {
 
 export default ({ text }) => (
   <View style={styles.container}>
-    <Text style={styles.text}>{text}</Text>
+    <SweetText style={styles.text}>{text}</SweetText>
   </View>
 );
