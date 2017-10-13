@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { SweetText } from './SweetText';
+import SweetText from './SweetText';
 import { LargeFontSize, FontWeightBold } from './typography';
 import { Grey200 } from './colours';
 

@@ -13,14 +13,14 @@ describe('SweetText', () => {
     it('should call have default styles', () => {
       const view = shallow(<SweetText />);
 
-      expect(view.props().style[0]).to.eql({ fontFamily: StandardFontFamily, fontSize: StandardFontSize });
+      expect(view.find(Text).props().style[0]).to.eql({ fontFamily: StandardFontFamily, fontSize: StandardFontSize });
     });
 
     it('should accept style as props', () => {
-      const styles = { color: DarkPink };
-      const view = shallow(<SweetText style={styles}/>);
+      const sweetStyles = { color: DarkPink };
+      const view = shallow(<SweetText style={sweetStyles}/>);
 
-      expect(view.props().style[1]).to.eql(styles);
+      expect(view.find(Text).props().style[1]).to.eql(sweetStyles);
     });
   });
 

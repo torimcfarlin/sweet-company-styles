@@ -93,7 +93,7 @@ const getDefaultContainerStyles = (buttonType) =>
 const getPressedContainerStyles = (buttonType) =>
   getDefaultContainerStyles(buttonType).concat(pressedContainerStyles[buttonType]);
 
-export default class Button extends Component {
+export default class SweetButton extends Component {
   constructor(props) {
     super(props);
     this.state = { pressed: false };
@@ -121,7 +121,7 @@ export default class Button extends Component {
         delayPressOut={0}
       >
         <View>
-          <Text style={getTextStyle(type)}>{text}</Text>
+          <SweetText style={getTextStyle(type)}>{text}</SweetText>
         </View>
       </Button>
     );
