@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { StandardFontSize, StandardFontFamily } from './typography';
+import { StandardFontSize, StandardFontFamily } from '../typography';
 
 const defaultStyles = {
   fontFamily: StandardFontFamily,

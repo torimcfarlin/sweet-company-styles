@@ -3,8 +3,7 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import SweetTitle from '../src/SweetTitle';
-import SweetText from '../src/SweetText';
+import { SweetTitle, SweetText } from '../src';
 import { StandardFontSize, StandardFontFamily } from '../src/typography';
 import { DarkPink } from '../src/colours';
 
