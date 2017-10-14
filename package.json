@@ -7,7 +7,7 @@
     "src/"
   ],
   "scripts": {
-    "test": "mocha specs/ --require react-native-mock/mock.js --compilers js:babel-core/register"
+    "test": "mocha specs/ --require specs/test-setup.js --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -16,18 +16,22 @@
   "author": "Tori McFarlin",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-react-native": "1.9.1",
     "babel-core": "^6.21.0",
+    "babel-preset-react-native": "1.9.1",
     "babel-register": "^6.22.0",
     "chai": "^3.5.0",
+    "chai-enzyme": "^0.8.0",
+    "cheerio": "^1.0.0-rc.2",
+    "dirty-chai": "^2.0.1",
     "enzyme": "^2.7.0",
     "mocha": "^3.2.0",
-    "react-native": "^0.42.3",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "react-native": "^0.42.3",
     "react-native-mock": "^0.2.9",
     "react-test-renderer": "15.4.2",
-    "sinon": "^1.17.7"
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.14.0"
   },
   "dependencies": {}
 }
