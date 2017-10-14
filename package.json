@@ -1,5 +1,5 @@
 {
-  "name": "@torimcfarlin/sweet-company-styles",
+  "name": "sweet-company-styles",
   "version": "1.0.0",
   "description": "SweetCompany styles for consistent company stylin'",
   "main": "src/index.js",
@@ -22,13 +22,12 @@
     "chai": "^3.5.0",
     "enzyme": "^2.7.0",
     "mocha": "^3.2.0",
+    "react-native": "^0.42.3",
+    "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-native-mock": "^0.2.9",
     "react-test-renderer": "15.4.2",
     "sinon": "^1.17.7"
   },
-  "dependencies": {
-    "react-native": "^0.42.3",
-    "react": "15.4.2"
-  }
+  "dependencies": {}
 }
