@@ -1,17 +1,15 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { StandardFontSize, StandardFontFamily } from '../typography';
+import { standardFontSize, standardFontFamily } from '../typography';
 
 const defaultStyles = {
-  fontFamily: StandardFontFamily,
-  fontSize: StandardFontSize,
+  fontFamily: standardFontFamily,
+  fontSize: standardFontSize,
 };
 
 export default ({ style, children }) => (
-  <View>
-    <Text style={[defaultStyles, style]}>
-      {children}
-    </Text>
-  </View>
+  <Text style={[defaultStyles, style]}>
+    {children}
+  </Text>
 );

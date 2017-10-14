@@ -1,19 +1,40 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
 import { SweetTitle, SweetText } from '../src';
-import { StandardFontSize, StandardFontFamily } from '../src/typography';
-import { DarkPink } from '../src/colours';
+import { fontWeightBold, largerFontSize } from '../src/typography';
+import { darkPink } from '../src/colours';
 
 describe('SweetTitle', () => {
-  describe('SweetText', () => {
-    it('should render text', () => {
-      text = 'Wicked Awesome Title';
-      const view = shallow(<SweetTitle text={text} />);
+  describe('styles', () => {
+    it('should call have default styles', () => {
+      const expectedStyles = {
+        fontWeight: fontWeightBold,
+        fontSize: largerFontSize,
+      };
 
-      expect(view.find(SweetText).props().children).to.eql(text);
+      const view = shallow(<SweetTitle />);
+
+      expect(view.find(SweetText).props().style[0]).to.eql(expectedStyles);
+    });
+
+    it('should accept style as props', () => {
+      const sweetStyles = { color: darkPink };
+      const view = shallow(<SweetTitle style={sweetStyles}/>);
+
+      expect(view.find(SweetText).props().style[1]).to.eql(sweetStyles);
+    });
+  });
+
+  describe('children', () => {
+    it('should render SweetText', () => {
+      const someText = 'Wicked Awesome Title';
+      const view = shallow(<SweetTitle>{someText}</SweetTitle>);
+
+      expect(view.find(SweetText).children().node).to.eql(someText);
     });
   });
 });

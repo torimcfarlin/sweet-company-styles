@@ -1,15 +1,15 @@
-export const TinyFontSize = 10;
-export const SmallerFontSize = 12;
-export const SmallFontSize = 14;
-export const StandardFontSize = 16;
-export const LargeFontSize = 18;
-export const LargerFontSize = 24;
+export const tinyFontSize = 10;
+export const smallerFontSize = 12;
+export const smallFontSize = 14;
+export const standardFontSize = 16;
+export const largeFontSize = 18;
+export const largerFontSize = 24;
 
-export const FontWeightLight = '300';
-export const FontWeightStandard = '400';
-export const FontWeightChubby = '500';
-export const FontWeightBold = '700';
+export const fontWeightLight = '300';
+export const fontWeightStandard = '400';
+export const fontWeightChubby = '500';
+export const fontWeightBold = '700';
 
-export const Italic = 'italic';
+export const italic = 'italic';
 
-export const StandardFontFamily = 'Helvetica Neue';
+export const standardFontFamily = 'Baskerville';
