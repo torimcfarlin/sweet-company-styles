@@ -1,6 +1,6 @@
 {
   "name": "sweet-company-styles",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "SweetCompany styles for consistent company stylin'",
   "main": "src/index.js",
   "files": [
