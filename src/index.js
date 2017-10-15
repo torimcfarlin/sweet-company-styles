@@ -3,16 +3,26 @@ export { default as SweetTitle } from "./components/SweetTitle";
 export { default as SweetButton } from "./components/SweetButton";
 
 export {
-  darkPink,
-  darkPinkShadow,
-  lightPink,
-  lightPinkShadow,
-  strawberry,
+  bubbleGum,
+  bubbleGumShadow,
   watermelon,
-  lemon,
-  lime,
+  watermelonShadow,
   fairyFloss,
+  fairyFlossShadow,
   grey,
   white,
   black,
 } from "./colours";
+
+export {
+  tinyFontSize,
+  smallerFontSize,
+  smallFontSize,
+  standardFontSize,
+  largeFontSize,
+  largerFontSize,
+  fontWeightLight,
+  fontWeightStandard,
+  fontWeightChubby,
+  fontWeightBold,
+} from "./typography";

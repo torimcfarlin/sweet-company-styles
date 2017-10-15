@@ -1,14 +1,11 @@
-export const darkPink = '#e724cc';
-export const darkPinkShadow = '#bc1aa6';
+export const bubbleGum = 'rgb(80, 200, 250)';
+export const bubbleGumShadow = 'rgb(58, 146, 183)';
 
-export const lightPink = '#fc83f4';
-export const lightPinkShadow = '#c164bb';
+export const watermelon = 'rgb(204, 27, 89)';
+export const watermelonShadow = 'rgb(142, 18, 62)';
 
-export const strawberry = '#f21f42';
-export const watermelon = '#fc83f4';
-export const lemon = '#f7fc82';
-export const lime = '#77efa5';
-export const fairyFloss = '#fad1fc';
+export const fairyFloss = 'rgb(255, 128, 173)';
+export const fairyFlossShadow = 'rgb(193, 98, 132)';
 
 export const grey = '#cacaca';
 export const white = '#ffffff';

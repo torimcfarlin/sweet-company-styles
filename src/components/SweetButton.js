@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { Button, View } from 'react-native';
 
 import {
-  darkPink,
-  darkPinkShadow,
-  lightPink,
-  lightPinkShadow,
+  fairyFloss,
+  fairyFlossShadow,
+  bubbleGum,
+  bubbleGumShadow,
   black,
   grey,
   white,
 } from '../colours';
 
 const colors = {
-  primary: darkPink,
-  secondary: lightPink,
+  primary: fairyFloss,
+  secondary: bubbleGum,
   disabled: grey,
 };
 
@@ -37,13 +37,13 @@ const defaultStyles = {
     borderColor: colors.primary,
     backgroundColor: colors.primary,
     borderBottomWidth: 3,
-    borderBottomColor: darkPinkShadow,
+    borderBottomColor: fairyFlossShadow,
   },
   secondary: {
     borderColor: colors.secondary,
     backgroundColor: colors.secondary,
     borderBottomWidth: 3,
-    borderBottomColor: lightPinkShadow,
+    borderBottomColor: bubbleGumShadow,
   },
   disabled: {
     borderColor: colors.disabled,
