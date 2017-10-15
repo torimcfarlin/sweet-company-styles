@@ -1,43 +1,54 @@
 import React from 'react';
 import { Button } from 'react-native';
-import chai, { expect } from 'chai';
+import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import dirtyChai from 'dirty-chai';
-import chaiEnzyme from 'chai-enzyme';
 
-import { SweetButton } from '../src';
-
-chai.use(chaiEnzyme());
-chai.use(sinonChai);
-chai.use(dirtyChai);
+import { SweetButton, white, grey } from '../src';
 
 describe('SweetButton', () => {
-  describe('type!=disabled', () => {
-    it('should have Button with disabled prop set to false', () => {
-      const sweetButton = shallow(<SweetButton type="primary" />);
+  describe('type', () => {
+    let sweetButton;
 
-      expect(sweetButton.find(Button)).to.have.prop('disabled', false);
+    context('primary', () => {
+      const type = 'primary';
+
+      beforeEach(() => {
+        sweetButton = shallow(<SweetButton type={type} />);
+      });
+
+      it('should have Button with disabled prop set to false', () => {
+        expect(sweetButton.find(Button)).to.have.prop('disabled', false);
+      });
+
+      it('should have Button with text color white', () => {
+        expect(sweetButton.find(Button)).to.have.prop('color', white);
+      });
+    });
+
+    context('disabled', () => {
+      const type = 'disabled';
+
+      beforeEach(() => {
+        sweetButton = shallow(<SweetButton type={type} />);
+      });
+
+      it('should have Button with disabled prop set to true', () => {
+        expect(sweetButton.find(Button)).to.have.prop('disabled', true);
+      });
+
+      it('should have Button with text color grey', () => {
+        expect(sweetButton.find(Button)).to.have.prop('color', grey);
+      });
     });
   });
 
-  describe('type=disabled', () => {
-    it('should have Button with disabled prop set to true', () => {
-      const sweetButton = shallow(<SweetButton type="disabled" />);
-
-      expect(sweetButton.find(Button)).to.have.prop('disabled', true);
-    });
-  });
-
-  describe('onPress', () => {
+  describe('onPress prop', () => {
     it('should call pressHandler', () => {
       const pressHandler = sinon.spy();
-      const sweetButton = shallow(<SweetButton
-        onPress={pressHandler}
-      />);
+      const sweetButton = shallow(<SweetButton onPress={pressHandler} />);
 
-      sweetButton.simulate('press');
+      sweetButton.find(Button).simulate('press');
 
       expect(pressHandler).to.have.been.called();
     });

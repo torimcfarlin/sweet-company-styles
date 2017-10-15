@@ -4,12 +4,15 @@ export { default as SweetButton } from "./components/SweetButton";
 
 export {
   darkPink,
-  lightPink,
   darkPinkShadow,
+  lightPink,
   lightPinkShadow,
   strawberry,
   watermelon,
   lemon,
   lime,
   fairyFloss,
+  grey,
+  white,
+  black,
 } from "./colours";
