@@ -19,4 +19,4 @@ and
 
 ## Examples
 
-If you'd like to see an example of the package in action, check out the [SweetCompanyApp]{https://github.com/torimcfarlin/SweetCompanyApp}.
+If you'd like to see an example of the package in action, check out the SweetCompanyApp at https://github.com/torimcfarlin/SweetCompanyApp.
